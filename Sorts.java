@@ -11,7 +11,6 @@ public class Sorts{
           data[j + 1] = temp;
           swaps++;
         }
-        System.out.println(Arrays.toString(data));
       }
       if (swaps == 0) break;
     }
