@@ -28,6 +28,16 @@ public class Sorts{
       }
       data[minPosition] = data[i];
       data[i] = min;
+    }
+  }
+
+  public static void insertionSort(int[] data){
+    for (int i = 1; i < data.length; i++){
+      int value = data[i];
+      for (int j = i - 1; j >= 0; j--){
+        if (data[j] > value) data[j + 1] = data[j];
+        else data[j + 1] = value;
+      }
       System.out.println(Arrays.toString(data));
     }
   }
