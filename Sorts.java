@@ -34,11 +34,15 @@ public class Sorts{
   public static void insertionSort(int[] data){
     for (int i = 1; i < data.length; i++){
       int value = data[i];
+      int position = i;
       for (int j = i - 1; j >= 0; j--){
-        if (data[j] > value) data[j + 1] = data[j];
-        else data[j + 1] = value;
+        if (data[j] > value){
+          data[j + 1] = data[j];
+          position = j;
+        }
+        else break;
       }
-      System.out.println(Arrays.toString(data));
+      data[position] = value;
     }
   }
 
